@@ -1,5 +1,7 @@
-public class Zombie extends Humanoid{
-    private int attackDamage = 10;
+import Classes.Humanoid;
+
+public class Zombie extends Humanoid {
+    private int attackDamage = 4;
     private int defence = 5;
 
     public Zombie(int hp, String name, String race) {

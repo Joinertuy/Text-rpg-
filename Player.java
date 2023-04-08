@@ -1,3 +1,5 @@
+import Classes.Humanoid;
+
 public class Player extends Humanoid {
     private int attackDamage;
     private int defence;
@@ -8,22 +10,13 @@ public class Player extends Humanoid {
         this.defence = defence;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() +
-                "\nAttack Damage : " + attackDamage +
-                "\nDefence : " + defence;
-    }
-
     public void updateHp(int x){
       int hp = getHp();
       hp = hp - x;
       setHp(hp);
     }
-
     public int attack(int x){
-        
-
+        x = this.attackDamage - x;
         return x;
     }
 
@@ -38,5 +31,12 @@ public class Player extends Humanoid {
     }
     public void setDefence(int defence) {
         this.defence = defence;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nAttack Damage : " + attackDamage +
+                "\nDefence : " + defence;
     }
 }
